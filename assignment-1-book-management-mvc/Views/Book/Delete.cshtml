@@ -1,0 +1,56 @@
+﻿﻿@model assignment_1_book_management_mvc.ViewModel.DeleteViewModel
+
+<h2>Delete Book</h2>
+<hr />
+
+@using (Html.BeginForm("Delete", "Book", FormMethod.Post))
+{
+    <div class="row">
+        <div class="col-sm-3">
+            Id
+        </div>
+        <div class="col-sm-3">
+            @Model.Id
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            Book Title
+        </div>
+        <div class="col-sm-3">
+            @Model.Title
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            Book Author
+        </div>
+        <div class="col-sm-3">
+            @Model.Author
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            Book Rating
+        </div>
+        <div class="col-sm-3">
+            @Model.Rating
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            Product Price
+        </div>
+        <div class="col-sm-3">
+            @Model.Price
+        </div>
+    </div>
+    <div class="row">
+        <div class=" col-sm-12">
+            <button type="submit" class="btn btn-danger">Delete</button>
+            @Html.ActionLink("Cancel", "Index", "Book", new { @class = "btn btn-success" })
+        </div>
+    </div>
+}
+
+
